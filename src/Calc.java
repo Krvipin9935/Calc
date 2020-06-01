@@ -370,11 +370,14 @@ public class Calc extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        jtxtDisplay.setText(jtxtDisplay.getText()+" ^ ");
+        flag=6;
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
+        jtxtDisplay.setText(jtxtDisplay.getText()+" / ");
+        flag=7;
+        
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -383,7 +386,7 @@ public class Calc extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        jtxtDisplay.setText(jtxtDisplay.getText()+"%");
+        jtxtDisplay.setText(jtxtDisplay.getText()+" % ");
         flag = 5;
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -491,14 +494,21 @@ jtxtDisplay.setText(jtxtDisplay.getText()+" / ");
         {
             jtxtDisplay.setText(jtxtDisplay.getText()+" "+(num1%num2));
         }
-       
-        
+       if(flag==6)
+        {
+            jtxtDisplay.setText(jtxtDisplay.getText()+" "+(num1*num1));
+        }
+        if(flag==7)
+        {
+            jtxtDisplay.setText(jtxtDisplay.getText()+" "+(1/num1));
+        }
         
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-             jtxtDisplay.setText("");
-                 flag=0;
+        String str = jtxtDisplay.getText();      
+        jtxtDisplay.setText(str.substring(0,str.length()-1));
+                 
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
